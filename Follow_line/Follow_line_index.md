@@ -5,7 +5,7 @@
 This blog will document “the follow line” exercise from Unibotics.org web page for the master’s degree Artificial Vision. 
 In this exercise the main goal is to follow a red line which is in the middle of the track and try to complete the lap in the shortest possible time. Less than 1 minute it’s a good time lap to accomplish it.
 
-On this site there is an online editor to type our codes with two libraries to move the car and to get the different images from the simulator. The libraries provide different methods like “HAL.sendV()” to control the car. The different methods are:
+On this site there is an online editor to type our codes with two libraries to move the car and to get the different images from the simulator. The libraries provide different methods to control the car like:
 * HAL.motors.sendV()
 * HAL.motors.sendW()
 * HAL.getImage()
