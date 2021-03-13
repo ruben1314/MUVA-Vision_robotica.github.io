@@ -6,10 +6,10 @@ This blog will document “the follow line” exercise from Unibotics.org web pa
 In this exercise the main goal is to follow a red line which is in the middle of the track and try to complete the lap in the shortest possible time. Less than 1 minute it’s a good time lap to accomplish it.
 
 On this site there is an online editor to type our codes with two libraries to move the car and to get the different images from the simulator. The libraries provide different methods like “HAL.sendV()” to control the car. The different methods are:
-    * HAL.motors.sendV()
-    * HAL.motors.sendW()
-    * HAL.getImage()
-    * GUI.showImage()
+* HAL.motors.sendV()
+* HAL.motors.sendW()
+* HAL.getImage()
+* GUI.showImage()
 
 Also it is important to know that the range of the speed is 0-5 and the range of the angular velocity is -0.5-0.5, being the negative numbers to turn right and the positive numbers to turn left. 
 
