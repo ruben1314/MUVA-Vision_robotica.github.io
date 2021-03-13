@@ -1,6 +1,9 @@
 # Follow line exercise
 
-## Post 13/03/2021
+## Index
+[Step 1: Post 13/03/2021 - Introduction](#step-1:-Introduction)
+
+## Post 13/03/2021 - Introduction
 
 This blog will document “the follow line” exercise from Unibotics.org web page for the master’s degree Artificial Vision. 
 In this exercise the main goal is to follow a red line which is in the middle of the track and try to complete the lap in the shortest possible time. Less than 1 minute it’s a good time lap to accomplish it.
