@@ -2,6 +2,7 @@
 
 ## Index
 [Step 1: Post 13/03/2021 - Introduction](#step-1:-Introduction)
+[Step 2: Post 14/03/2021 - Proportional controller implemented](#step-1:-Proportional controller implemented)
 
 ## Post 13/03/2021 - Introduction
 
@@ -29,3 +30,19 @@ With this approach the car can know where is the line and then the different sta
 
 
 With all these things in mind, we can start to implement the different actions that the car has to do based on the error that the color filter tell us. 
+
+## Post 14/03/2021 - Proportional controller implemented
+
+In the first post was explained how the line can be located, so now we are going to implement the first steps to move the car straight forward and try to turn right or left when the car came to a curve.
+
+The first approach is going to be to implement a proportional controller for a constant speed, which is a good one, but it’s easy to correct too much the steering wheel angle in most situations. 
+The formula of the proportional controller is: u = −Kp * e, being e the error, Kp a constant, which will be adjust by us based on the experience, and u the steering wheel angle that has to be apply. In this case, the error will measure how much the car have to increase or decrease the steering wheel angle to follow the line. 
+
+Once the controller is implemented, we can see the results on the next video:
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/VoteLytbrWY/0.jpg)](https://www.youtube.com/watch?v=VoteLytbrWY)
+
+As we can see with the proportional controller the car can drive quite consistently, but sometimes, especially in changes of direction, the car is turning to one side bit it is not able to change the direction before crossing the line. 
+For this reason, in the proportional controller the Kp constant is adjusted to 0.0015.
+
+So based on the results, the car is already quite good but it is not driving over the line, because the proportional controller is not enough to correct the steering wheel angle completely.
