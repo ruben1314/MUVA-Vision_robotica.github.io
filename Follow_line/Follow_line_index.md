@@ -46,3 +46,21 @@ As we can see with the proportional controller the car can drive quite consisten
 For this reason, in the proportional controller the Kp constant is adjusted to 0.0015.
 
 So based on the results, the car is already quite good but it is not driving over the line, because the proportional controller is not enough to correct the steering wheel angle completely.
+
+## Post 15/03/2021 - Derivative controller implemented
+
+With a proportional controller implemented, there are many ways to improve the car skills, and one of them is to implement a derivative controller, which allows the car to apply an extra correction of the steering wheel  if the error is increasing. On the opposite side, if the error is decreasing the derivative controller will reduce the amount of steering wheel angle that is applied. 
+
+For this derivative controller the formula is: u = Kd * de/dt. With this formula the car is able to know if the error is increasing or decreasing over time. Obviously, this controller is an extra for the proportional controller, so the formula that mix both controllers is: u = Kp * e + Kd * de/dt.
+
+Theoretically, the car will change the steering wheel angle more when the line is moving away and the car will change the steering wheel angle less when the line is approaching. This controller should improve the car skills at the corners entry, because the line will be moving away and both controllers, proportional and derivative, will apply steering wheel angle in the same direction. On the other hand, at corners exit the error will be decreasing, so the derivative controller will apply the correction in the opposite direction than the proportional controller. 
+
+With this controller implemented, the results are the following: 
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/faM9I33EBJE/0.jpg)](https://www.youtube.com/watch?v=faM9I33EBJE)
+
+In the video, we can see how the derivative controller works at the exit of the first corner, because the derivative controller applies force in the opposite direction than the proportional controller and the car does not cross the red line unlike the proportional controller video. 
+
+For this case, the Kd  constant is adjusted to 0.0020 and the car is moving straight forward at the same speed every time. 
+
+In conclusion, with this modification the car drive a little better but it is not enough to drive over the red line because when the error is the same in each iteration, the derivative controller does not apply any force in any direction. 
