@@ -81,3 +81,15 @@ In the video is easy to see how the integral controller can apply more correctio
 For this controller the Ki constant is adjusted to 0.010. 
 
 In conclusion with a PID controller implemented and constant speed, the car is able to finish the lap in 0:52 secs, which improves the proportional controller lap in one second. Obviously, it is not too much improvement, but in all these experiments the speed had been constant, so the improvements are just related to how the car is driving over the red line. 
+
+## Post 16/03/2021 - PD controller to control speed
+
+After implement a PID controller to control the angular velocity, the car is able to follow the line and finish the track on 0:52 secs, but the speed was always the same, so depending on if the car is on a straight section or a corner, the speed could be different. 
+
+For that reason, a PD controller has been implemented to control the speed of the car. In this case the action is the inverse of the angular velocity, so if the line is on the middle of the image the error would be 0 and the speed has to be maximum. 
+
+The principles of this PD controller are the same as the PID controller for the angular velocity, adjusting the Kp to 0.011 and the Kd  to 0.020. The final formula to control the speed would be: u = Kp * e + Kd * de/dt
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/36OFG1I7t3w/0.jpg)](https://www.youtube.com/watch?v=36OFG1I7t3w)
+
+As it can be seen in the video, controlling the speed the car can finish the lap in 0:38 secs, which is a good lap time improvement. Although it is a good time, we can see that the car is not perfect yet. It could be because the constants of the PID controllers can be adjusted better, therefore this are going to do in the next post. 
