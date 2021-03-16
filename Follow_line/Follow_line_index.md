@@ -34,7 +34,7 @@ With this approach the car can know where is the line and then the different sta
 
 With all these things in mind, we can start to implement the different actions that the car has to do based on the error that the color filter tell us. 
 
-## Post 14/03/2021 - Proportional controller implemented
+## Post 14/03/2021 - Proportional controller implemented <a name="Proportional_controller_implemented"></a>
 
 In the first post was explained how the line can be located, so now we are going to implement the first steps to move the car straight forward and try to turn right or left when the car came to a curve.
 
@@ -50,7 +50,7 @@ For this reason, in the proportional controller the Kp constant is adjusted to 0
 
 So based on the results, the car is already quite good but it is not driving over the line, because the proportional controller is not enough to correct the steering wheel angle completely.
 
-## Post 15/03/2021 - Derivative controller implemented
+## Post 15/03/2021 - Derivative controller implemented <a name="Derivative_controller_implemented"></a>
 
 With a proportional controller implemented, there are many ways to improve the car skills, and one of them is to implement a derivative controller, which allows the car to apply an extra correction of the steering wheel  if the error is increasing. On the opposite side, if the error is decreasing the derivative controller will reduce the amount of steering wheel angle that is applied. 
 
@@ -68,7 +68,7 @@ For this case, the Kd  constant is adjusted to 0.0020 and the car is moving stra
 
 In conclusion, with this modification the car drive a little better but it is not enough to drive over the red line because when the error is the same in each iteration, the derivative controller does not apply any force in any direction. 
 
-## Post 16/03/2021 - Integral controller implemented
+## Post 16/03/2021 - Integral controller implemented <a name="Integral_controller_implemented"></a>
 
 In the post before a derivative controller was implemented, but we saw that it was not enough to drive over the red line, so in this step an integral controller is going to be implemented. 
 
@@ -85,7 +85,7 @@ For this controller the Ki constant is adjusted to 0.010.
 
 In conclusion with a PID controller implemented and constant speed, the car is able to finish the lap in 0:52 secs, which improves the proportional controller lap in one second. Obviously, it is not too much improvement, but in all these experiments the speed had been constant, so the improvements are just related to how the car is driving over the red line. 
 
-## Post 16/03/2021 - PD controller to control speed
+## Post 16/03/2021 - PD controller to control speed <a name="PD_controller_to_control_speed"></a>
 
 After implement a PID controller to control the angular velocity, the car is able to follow the line and finish the track on 0:52 secs, but the speed was always the same, so depending on if the car is on a straight section or a corner, the speed could be different. 
 
