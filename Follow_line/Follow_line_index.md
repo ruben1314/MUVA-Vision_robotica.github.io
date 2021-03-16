@@ -64,3 +64,20 @@ In the video, we can see how the derivative controller works at the exit of the 
 For this case, the Kd  constant is adjusted to 0.0020 and the car is moving straight forward at the same speed every time. 
 
 In conclusion, with this modification the car drive a little better but it is not enough to drive over the red line because when the error is the same in each iteration, the derivative controller does not apply any force in any direction. 
+
+## Post 16/03/2021 - Integral controller implemented
+
+In the post before a derivative controller was implemented, but we saw that it was not enough to drive over the red line, so in this step an integral controller is going to be implemented. 
+
+An integral controller will provide the car an extra variable to correct the steering wheel angle, this controller see how much time the car is having error regarding the red line. So, for example, if the car is having error for 3 iterations the integral controller will apply correction in the error direction, and it will increase the correction in every iteration that has error. 
+For this controller the formula is: u = Ki  *  ![ecuation](https://latex.codecogs.com/gif.latex?%5Cint%20e%28t%29%20dt), being the integral of the time that the car has error regarding the red line. 
+In the next video the improvement of the car can be seen: 
+
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/SB1EGJi4uv8/0.jpg)](https://www.youtube.com/watch?v=SB1EGJi4uv8)
+
+In the video is easy to see how the integral controller can apply more correction of the steering wheel when the car is not driving over the red line, sometimes the car even cross the line, because the car takes a long time with error and the integral controller is applying too much correction. 
+
+For this controller the Ki constant is adjusted to 0.010. 
+
+In conclusion with a PID controller implemented and constant speed, the car is able to finish the lap in 0:52 secs, which improves the proportional controller lap in one second. Obviously, it is not too much improvement, but in all these experiments the speed had been constant, so the improvements are just related to how the car is driving over the red line. 
