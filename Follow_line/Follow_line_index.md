@@ -1,11 +1,11 @@
 # Follow line exercise
 
 ## Index
-* [Post 13/03/2021 - Introduction](#ntroduction)
-* [Post 14/03/2021 - Proportional controller implemented](#Proportional_controller_implemented)
-* [Post 15/03/2021 - Derivative controller implemented](#Derivative_controller_implemented)
-* [Post 16/03/2021 - Integral controller implemented](#Integral_controller_implemented)
-* [Post 16/03/2021 - PD controller to control speed](#PD_controller_to_control_speed)
++ [Post 13/03/2021 - Introduction](#ntroduction)
++ [Post 14/03/2021 - Proportional controller implemented](#Proportional_controller_implemented)
++ [Post 15/03/2021 - Derivative controller implemented](#Derivative_controller_implemented)
++ [Post 16/03/2021 - Integral controller implemented](#Integral_controller_implemented)
++ [Post 16/03/2021 - PD controller to control speed](#PD_controller_to_control_speed)
 
 ## Post 13/03/2021 - Introduction
 
