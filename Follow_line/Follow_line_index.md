@@ -1,13 +1,13 @@
 # Follow line exercise
 
 ## Index
-+ [Post 13/03/2021 - Introduction](#ntroduction)
++ [Post 13/03/2021 - Introduction](#Introduction)
 + [Post 14/03/2021 - Proportional controller implemented](#Proportional_controller_implemented)
 + [Post 15/03/2021 - Derivative controller implemented](#Derivative_controller_implemented)
 + [Post 16/03/2021 - Integral controller implemented](#Integral_controller_implemented)
 + [Post 16/03/2021 - PD controller to control speed](#PD_controller_to_control_speed)
 
-## Post 13/03/2021 - Introduction
+## Post 13/03/2021 - Introduction <a name="Introduction"></a>
 
 This blog will document “the follow line” exercise from Unibotics.org web page for the master’s degree Artificial Vision. 
 In this exercise the main goal is to follow a red line which is in the middle of the track and try to complete the lap in the shortest possible time. Less than 1 minute it’s a good time lap to accomplish it.
