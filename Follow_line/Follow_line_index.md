@@ -117,12 +117,12 @@ These constants are adjusted based on the experience, the Brain Frequency of the
           
 With this values the car is able to finish the lap in 0:35 secs as we can see in the next video:
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/APt0orgyQs/0.jpg)](https://www.youtube.com/watch?v=APt0orgyQs)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/EYe5PO8mI0U/0.jpg)](https://www.youtube.com/watch?v=EYe5PO8mI0U)
 
 It is possible to see that the car is driving fast and following the line well in most situations, nevertheless when the track circuit is twisty the controllers are not able to change the direction of the car and it is not very stable. On the other hand, the car speed is well adjusted when the car is driving on a straight section squeezing the engine almost to the fullest.
 
 With these controllers the car is able to finish the lap in a a good time. Nevertheless, if the track would have more corners, the car would be worse. For that reason, a safe mode has been implemented to control the car better. This modification affects in the lap time, but the car would be better in most tracks. The following video show how the car drives:
 
-
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/-APt0orgyQs/0.jpg)](https://www.youtube.com/watch?v=-APt0orgyQs)
 
 In conclusion, the PID controllers to control the angular velocity are quite good in most situations, providing the car the possibility to take the corners over the red line as it can be seen in the videos that are recorded before the speed proportional controller was implemented. After that, only with a PD controller to control the speed is enough to improve the car time lap. 
