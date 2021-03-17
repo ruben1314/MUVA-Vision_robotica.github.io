@@ -6,6 +6,7 @@
 + [Post 15/03/2021 - Derivative controller implemented](#Derivative_controller_implemented)
 + [Post 16/03/2021 - Integral controller implemented](#Integral_controller_implemented)
 + [Post 16/03/2021 - PD controller to control speed](#PD_controller_to_control_speed)
++ [Post 17/03/2021 - Controller constants adjusted and search red line implemented](#Controller_constants_adjusted_and_search_red_line_implemented)
 
 ## Post 13/03/2021 - Introduction <a name="Introduction"></a>
 
@@ -96,3 +97,32 @@ The principles of this PD controller are the same as the PID controller for the 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/36OFG1I7t3w/0.jpg)](https://www.youtube.com/watch?v=36OFG1I7t3w)
 
 As it can be seen in the video, controlling the speed the car can finish the lap in 0:38 secs, which is a good lap time improvement. Although it is a good time, we can see that the car is not perfect yet. It could be because the constants of the PID controllers can be adjusted better, therefore this are going to do in the next post. 
+
+## Post 17/03/2021 - Controller constants adjusted and search red line implemented <a name="Controller_constants_adjusted_and_search_red_line_implemented"></a>
+
+In the last steps of this exercise, I’m going to implement the last skill that the car is going to have. In the simulator the car is always starting in front of the red line, nevertheless there can be a situation in which the car start without being able to see the line. In that cases, the car has to turn in any direction to search the line. As we can see in the next video, the car start seeing the wall and then it turn left. When the car finds the line the iterative code stars.
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/RAu8IArTZNQ/0.jpg)](https://www.youtube.com/watch?v=RAu8IArTZNQ)
+
+After this implementation the car is able to finish the lap in less than one minute and to search the line at the beginning of the lap. So it’s time to adjust perfectly the constants of the different controllers implemented. 
+
+These constants are adjusted based on the experience, the Brain Frequency of the web page simulator and GUI Frequency. After a few executions the constants values are:
+* Angular velocity controllers:
+  * Kp = 0.016
+  * KD = 0.020
+  * Ki = 0.010
+* Speed:
+  * Kp = 0.0125      
+  * KD = 0.010
+          
+With this values the car is able to finish the lap in 0:35 secs as we can see in the next video:
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/APt0orgyQs/0.jpg)](https://www.youtube.com/watch?v=APt0orgyQs)
+
+It is possible to see that the car is driving fast and following the line well in most situations, nevertheless when the track circuit is twisty the controllers are not able to change the direction of the car and it is not very stable. On the other hand, the car speed is well adjusted when the car is driving on a straight section squeezing the engine almost to the fullest.
+
+With these controllers the car is able to finish the lap in a a good time. Nevertheless, if the track would have more corners, the car would be worse. For that reason, a safe mode has been implemented to control the car better. This modification affects in the lap time, but the car would be better in most tracks. The following video show how the car drives:
+
+
+
+In conclusion, the PID controllers to control the angular velocity are quite good in most situations, providing the car the possibility to take the corners over the red line as it can be seen in the videos that are recorded before the speed proportional controller was implemented. After that, only with a PD controller to control the speed is enough to improve the car time lap. 
