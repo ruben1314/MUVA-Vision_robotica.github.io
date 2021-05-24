@@ -99,6 +99,7 @@ These images are with the 100% progress of the algorithm completed:
 </p>
 
 Also, in this video the results can be seen:
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/yxwHzpC4u-g/0.jpg)](https://www.youtube.com/watch?v=yxwHzpC4u-g)
 
 
