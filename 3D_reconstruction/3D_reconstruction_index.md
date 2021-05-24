@@ -98,6 +98,9 @@ These images are with the 100% progress of the algorithm completed:
   <img src="images/Final_images/lado.png" alt="Sideways 100% progress" width="55%" />
 </p>
 
+Also, in this video the results can be seen:
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/yxwHzpC4u-g/0.jpg)](https://www.youtube.com/watch?v=yxwHzpC4u-g)
+
 
 
 ## Conclusions
