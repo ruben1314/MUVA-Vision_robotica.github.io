@@ -100,6 +100,6 @@ These images are with the 100% progress of the algorithm completed:
 
 
 
-CONCLUSIONES
+## Conclusions
 
 In conclusion, with this algorithm we can reconstruct the scene with a par stereo cameras and construct a point cloud that represents the real scene. Moreover, we can represent the real depth of the objects with just process the left and right images.
